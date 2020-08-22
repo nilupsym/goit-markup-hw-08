@@ -1,10 +1,10 @@
 /* ЧЕМ МЫ ЗАНИМАЕМСЯ */
-.what-we-do.section {
-  padding-top: 0px;
 
-  @media (max-width: 1199px) {
+.what-we-do.section {
+  @media screen and (max-width: 1199px) {
     display: none;
   }
+  padding-top: 0px;
 }
 
 .title {

@@ -1,19 +1,5 @@
 /* ПОЧЕМУ МЫ */
 
-.why-are-we-list {
-  display: flex;
-  justify-content: center;
-}
-
-.why-are-we-list-item {
-  /* width: 270px; */
-  width: calc((100% - 90px) / 4);
-
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
-}
-
 .subtitle {
   margin-top: 30px;
   margin-bottom: 10px;
@@ -22,6 +8,7 @@
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
 
   color: #212121;
 }
@@ -41,4 +28,48 @@
   padding-top: 25px;
   background-color: $section-background-color;
   border-radius: 4px;
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .why-are-we-list-item {
+    width: 480px;
+  }
+}
+
+@media (max-width: 767px) {
+  .why-are-we-list-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .why-are-we-list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .why-are-we-list-item {
+    width: 354px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .why-are-we-list-item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
+  }
+
+  .why-are-we-list-item:nth-child(2n - 1) {
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .why-are-we-list-item {
+    width: calc((100% - 90px) / 4);
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
 }

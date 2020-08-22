@@ -42,16 +42,51 @@ img {
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.container {
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .section {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    width: 1200px;
+  }
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
 }
 
 /* Модальное окно */
@@ -451,20 +486,6 @@ img {
 }
 
 /* ПОЧЕМУ МЫ */
-.why-are-we-list {
-  display: flex;
-  justify-content: center;
-}
-
-.why-are-we-list-item {
-  /* width: 270px; */
-  width: calc((100% - 90px) / 4);
-}
-
-.why-are-we-list-item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .subtitle {
   margin-top: 30px;
   margin-bottom: 10px;
@@ -473,6 +494,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
   color: #212121;
 }
 
@@ -493,12 +515,53 @@ img {
   border-radius: 4px;
 }
 
+@media (min-width: 480px) and (max-width: 767px) {
+  .why-are-we-list-item {
+    width: 480px;
+  }
+}
+
+@media (max-width: 767px) {
+  .why-are-we-list-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .why-are-we-list {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .why-are-we-list-item {
+    width: 354px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .why-are-we-list-item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
+  }
+  .why-are-we-list-item:nth-child(2n - 1) {
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .why-are-we-list-item {
+    width: calc((100% - 90px) / 4);
+  }
+  .why-are-we-list-item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
 /* ЧЕМ МЫ ЗАНИМАЕМСЯ */
 .what-we-do.section {
   padding-top: 0px;
 }
 
-@media (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .what-we-do.section {
     display: none;
   }

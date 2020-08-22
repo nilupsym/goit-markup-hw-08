@@ -1,0 +1,49 @@
+/* ПОЧЕМУ МЫ */
+
+.why-are-we .container {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.why-are-we-list {
+  display: flex;
+  justify-content: center;
+}
+
+.why-are-we-list-item {
+  /* width: 270px; */
+  width: calc((100% - 90px) / 4);
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.subtitle {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #212121;
+}
+
+.why-are-we-feature {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: $main-text-color;
+}
+
+.why-img {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  background-color: $section-background-color;
+  border-radius: 4px;
+}

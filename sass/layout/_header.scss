@@ -1,0 +1,120 @@
+/* ШАПКА САЙТА */
+.header {
+  border-bottom: 1px solid #ececec;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.header-main-page {
+  border: none;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+
+  .logo {
+    margin-right: 85px;
+    padding-top: 24px;
+    padding-bottom: 25px;
+  }
+}
+
+.logo {
+  font-family: $logo-font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: $main-logo-color;
+
+  &-element {
+    color: $element-logo-color;
+  }
+}
+
+.navigation-list {
+  display: flex;
+}
+
+.navigation-list-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.navigation-list-link,
+.address-list-item-link {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: $main-text-color;
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address-list {
+  display: flex;
+}
+
+.address-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.navigation-list-link:hover,
+.navigation-list-link:focus,
+.address-list-item-link:hover,
+.address-list-item-link:focus {
+  color: $accent-color;
+}
+
+.header-mail-svg {
+  margin-right: 10px;
+  fill: $main-text-color;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-phone-svg {
+  margin-right: 10px;
+  fill: $main-text-color;
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.address-list-item-link:hover .header-mail-svg {
+  fill: $accent-color;
+}
+.address-list-item-link:focus .header-mail-svg {
+  fill: $accent-color;
+}
+
+.address-list-item-link:hover .header-phone-svg {
+  fill: $accent-color;
+}
+
+.address-list-item-link:focus .header-phone-svg {
+  fill: $accent-color;
+}
+
+.current-page-link {
+  color: #2196f3;
+}
+
+.navigation-list-link.current-page-link::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background: #2196f3;
+  border-radius: 2px;
+  transform: translateY(32px);
+}

@@ -1,22 +1,23 @@
 /* ПОДВАЛ САЙТА */
 
-.footer {
+.footer.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
   background-color: $footer-background-color;
+}
 
-  .container {
-    display: flex;
-    align-items: baseline;
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
+.footer .container {
+  display: flex;
+  align-items: baseline;
+}
 
-  &-left {
-    margin-right: 69px;
-  }
+.footer-left {
+  margin-right: 69px;
+}
 
-  &-studio {
-    color: $footer-logo-color;
-  }
+.footer-studio {
+  color: $footer-logo-color;
 }
 
 .contact-list {

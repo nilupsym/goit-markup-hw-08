@@ -1,7 +1,10 @@
 /* ЧЕМ МЫ ЗАНИМАЕМСЯ */
+.what-we-do.section {
+  padding-top: 0px;
 
-.what-we-do .container {
-  padding-bottom: 94px;
+  @media (max-width: 1199px) {
+    display: none;
+  }
 }
 
 .title {

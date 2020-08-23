@@ -753,13 +753,10 @@ img {
 }
 
 /* ПОСТОЯННЫЕ КЛИЕНТЫ */
-.clients .container {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .clients-list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .clients-list-item {
@@ -768,15 +765,10 @@ img {
   align-items: center;
 }
 
-.clients-list-item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .clients-list-item-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 170px;
   height: 90px;
   border: 1px solid #afb1b8;
   box-sizing: border-box;
@@ -801,6 +793,55 @@ img {
 .clients-list-item-link:hover .clients-icon,
 .clients-list-item-link:focus .clients-icon {
   fill: #2196f3;
+}
+
+@media (max-width: 479px) {
+  .clients-list {
+    display: block;
+  }
+  .clients-list-item-link {
+    width: 210px;
+  }
+  .clients-list-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .clients-list-item-link {
+    width: 210px;
+  }
+  .clients-list-item:nth-child(2n - 1) {
+    margin-right: 30px;
+  }
+  .clients-list-item:not(:nth-last-child(-n + 2)) {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .clients-list-item-link {
+    width: 226px;
+  }
+  .clients-list-item:not(:nth-child(3n)) {
+    margin-right: 30px;
+  }
+  .clients-list-item:nth-last-child(n + 4) {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .clients-list-item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .clients-list-item-link {
+    width: 170px;
+  }
 }
 
 /* ПОРТФОЛИО */

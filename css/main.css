@@ -42,31 +42,13 @@ img {
 .section {
   padding-top: 60px;
   padding-bottom: 60px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media screen and (min-width: 480px) {
-  .section {
-    width: 480px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .section {
-    width: 768px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .section {
-    width: 1200px;
-  }
 }
 
 .container {
   margin-left: auto;
   margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 @media screen and (min-width: 480px) {
@@ -1006,18 +988,7 @@ img {
 
 /* ПОДВАЛ САЙТА */
 .footer.section {
-  padding-top: 60px;
-  padding-bottom: 60px;
   background-color: #2f303a;
-}
-
-.footer .container {
-  display: flex;
-  align-items: baseline;
-}
-
-.footer-left {
-  margin-right: 69px;
 }
 
 .footer-studio {
@@ -1058,7 +1029,7 @@ img {
 }
 
 .footer-social-link-list {
-  display: flex;
+  display: inline-flex;
 }
 
 .footer-social-link-list-link {
@@ -1088,22 +1059,15 @@ img {
   fill: #ffffff;
 }
 
-.footer-subscribe {
-  margin-left: 94px;
-}
-
-.footer-subscribe-form {
-  display: flex;
-}
-
 .footer-subscribe-input {
-  width: 358px;
+  display: block;
+  width: 100%;
   height: 50px;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 16px;
   padding-right: 16px;
-  margin-right: 12px;
+  margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-sizing: border-box;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -1121,7 +1085,7 @@ img {
 }
 
 .footer-subscribe-btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   width: 200px;
   height: 50px;
@@ -1142,5 +1106,55 @@ img {
 .footer-subscribe-svg {
   margin-left: 10px;
   fill: #ffffff;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer .container {
+    text-align: center;
+  }
+  .footer-left {
+    margin-bottom: 60px;
+  }
+  .footer-join {
+    margin-bottom: 102px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-left {
+    margin-right: 165px;
+  }
+  .footer-subscribe-input {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .footer-left {
+    margin-right: 69px;
+  }
+  .footer-join {
+    margin-right: 94px;
+  }
+  .footer-subscribe-form {
+    display: flex;
+  }
+  .footer-subscribe-input {
+    width: 358px;
+    margin-right: 12px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

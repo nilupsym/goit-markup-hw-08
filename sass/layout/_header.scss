@@ -82,6 +82,10 @@
   color: $main-text-color;
 }
 
+.current-page-link {
+  color: #2196f3;
+}
+
 @media screen and (max-width: 767px) {
   .menu-button {
     display: inline-flex;
@@ -123,6 +127,7 @@
     text-align: center;
     &.is-open {
       display: block;
+      z-index: 10000;
     }
   }
 
@@ -147,10 +152,6 @@
 
   .address-list-item:not(:last-child) {
     margin-bottom: 16px;
-  }
-
-  .current-page-link {
-    color: #2196f3;
   }
 }
 

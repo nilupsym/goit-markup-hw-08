@@ -14,50 +14,74 @@
 
   <body>
     <!-- Шапка сайта -->
-    <header class="header">
+    <header class="header header-main-page">
       <div class="container">
-        <nav class="navigation">
-          <a class="logo link" lang="en" href="./index.html"
-            ><span class="logo-element">Web</span> Studio</a
+        <a class="logo link" lang="en" href="./index.html"
+          ><span class="logo-element">Web</span> Studio</a
+        ><button
+          type="button"
+          class="menu-button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
           >
-          <ul class="navigation-list list">
-            <li class="navigation-list-item">
-              <a class="navigation-list-link link" href="./index.html"
-                >Студия</a
-              >
-            </li>
-            <li class="navigation-list-item">
-              <a
-                class="navigation-list-link current-page-link link"
-                href="./portfolio.html"
-                >Портфолио</a
-              >
-            </li>
-            <li class="navigation-list-item">
-              <a class="navigation-list-link link" href="">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <address class="address">
-          <ul class="address-list list">
-            <li class="address-list-item">
-              <a
-                class="address-list-item-link link"
-                href="mailto:info@devstudio.com"
-                ><svg class="header-mail-svg" width="16" height="11">
-                  <use href="./images/sprite.svg#envelope"></use></svg
-                >info@devstudio.com</a
-              >
-            </li>
-            <li class="address-list-item">
-              <a class="address-list-item-link link" href="tel:+380961111111"
-                ><svg class="header-phone-svg" width="10" height="15">
-                  <use href="./images/sprite.svg#smartphone"></use></svg
-                >+38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-        </address>
+            <use class="burger" href="./images/sprite.svg#burger"></use>
+            <use
+              class="burger-close"
+              href="./images/sprite.svg#burger-close"
+            ></use>
+          </svg>
+        </button>
+        <div data-menu class="menu-container">
+          <nav class="navigation">
+            <ul class="navigation-list list">
+              <li class="navigation-list-item">
+                <a class="navigation-list-link link" href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="navigation-list-item">
+                <a
+                  class="navigation-list-link current-page-link link"
+                  href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="navigation-list-item">
+                <a class="navigation-list-link link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div>
+            <address class="address">
+              <ul class="address-list list">
+                <li class="address-list-item">
+                  <a
+                    class="address-list-item-link link"
+                    href="mailto:info@devstudio.com"
+                    ><svg class="header-mail-svg" width="16" height="11">
+                      <use href="./images/sprite.svg#envelope"></use></svg
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="address-list-item">
+                  <a
+                    class="address-list-item-link link"
+                    href="tel:+380961111111"
+                    ><svg class="header-phone-svg" width="10" height="15">
+                      <use href="./images/sprite.svg#smartphone"></use></svg
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -289,7 +313,7 @@
       </section>
     </main>
     <!-- Подвал сайта -->
-    <footer class="footer">
+    <footer class="footer section">
       <div class="container">
         <div class="footer-left">
           <a class="logo link" lang="en" href="./index.html"
@@ -389,5 +413,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

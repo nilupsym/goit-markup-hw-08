@@ -1,20 +1,16 @@
 /* ПОРТФОЛИО */
+
 .portfolio .container {
-  padding-top: 93px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .portfolio-filter {
   display: flex;
-  justify-content: center;
 }
 
-.portfolio-filter-list-item {
+.portfolio-filter-list-item:not(:last-child) {
   margin-right: 8px;
-
-  &:last-child {
-    margin-right: 0px;
-  }
 }
 
 .portfolio-button {
@@ -43,26 +39,6 @@
     background-color: $accent-color;
 
     color: #ffffff;
-  }
-}
-
-.portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 34px;
-}
-
-.portfolio-list-item {
-  width: calc((100% - 60px) / 3);
-  margin-right: 30px;
-  margin-bottom: 30px;
-
-  &:nth-child(3n) {
-    margin-right: 0px;
-  }
-
-  &:nth-last-child(-n + 3) {
-    margin-bottom: 0px;
   }
 }
 
@@ -134,5 +110,76 @@
   .portfolio-list-item-link:hover & {
     transform: translateY(0%);
     opacity: 1;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .portfolio-list-item {
+    width: 450px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .portfolio-filter {
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  .portfolio-filter-list-item:nth-child(-n + 3) {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .portfolio-filter {
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .portfolio-list-item {
+    width: calc((100% - 30px) / 2);
+
+    &:nth-child(2n - 1) {
+      margin-right: 30px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio .container {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .portfolio-filter {
+    margin-bottom: 50px;
+  }
+
+  .portfolio-list-item {
+    width: calc((100% - 60px) / 3);
+    margin-right: 30px;
+    margin-bottom: 30px;
+
+    &:nth-child(3n) {
+      margin-right: 0px;
+    }
+
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 0px;
+    }
   }
 }

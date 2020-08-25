@@ -30,14 +30,12 @@
   border-radius: 4px;
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .why-are-we-list-item {
-    width: 480px;
-  }
-}
-
 @media screen and (max-width: 767px) {
-  .why-are-we-list-item:not(:last-child) {
+  .why-are-we-list-item {
+    max-width: 480px;
+  }
+
+  &:not(:last-child) {
     margin-bottom: 30px;
   }
 }

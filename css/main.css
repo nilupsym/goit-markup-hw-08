@@ -817,7 +817,7 @@ img {
     justify-content: center;
   }
   .team-list-item {
-    width: calc((100% - 60px) / 2);
+    width: calc((100% - 30px) / 2);
   }
   .team-list-item:not(:nth-last-child(-n + 2)) {
     margin-bottom: 30px;

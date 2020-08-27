@@ -37,40 +37,42 @@
   }
 }
 
-.portfolio-list-item-link {
-  border: 1px solid #eeeeee;
-  transition-property: box-shadow;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+.portfolio-list-item {
+  width: 100%;
 
-  &:hover,
-  &:focus {
-    box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
-      0px 1px 1px rgba(0, 0, 0, 0.12);
+  &-link {
+    border: 1px solid #eeeeee;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16),
+        0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+    }
   }
-}
 
-.portfolio-list-item-name {
-  margin: 0px;
-  margin-top: 20px;
-  padding-left: 24px;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-  color: $title-color;
-}
+  &-name {
+    margin-top: 20px;
+    padding-left: 24px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: $title-color;
+  }
 
-.portfolio-list-item-desc {
-  margin: 0px;
-  margin-top: 4px;
-  padding-bottom: 20px;
-  padding-left: 24px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.03em;
-  color: $main-text-color;
+  &-desc {
+    margin-top: 4px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.03em;
+    color: $main-text-color;
+  }
 }
 
 .potfolio-desc {
@@ -111,10 +113,6 @@
 @media screen and (min-width: 480px) and (max-width: 767px) {
   .portfolio-list-item {
     width: 450px;
-
-    &:not(:last-child) {
-      margin-bottom: 30px;
-    }
   }
 }
 
@@ -126,6 +124,9 @@
   .portfolio-filter-list-item:nth-child(-n + 3) {
     margin-bottom: 15px;
   }
+  .portfolio-list-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -133,12 +134,17 @@
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
   }
 
   .portfolio-list {
     display: flex;
     flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio-filter {
+    margin-bottom: 30px;
   }
 
   .portfolio-list-item {
@@ -166,15 +172,13 @@
 
   .portfolio-list-item {
     width: calc((100% - 60px) / 3);
-    margin-right: 30px;
-    margin-bottom: 30px;
 
-    &:nth-child(3n) {
-      margin-right: 0px;
+    &:not(:nth-child(3n)) {
+      margin-right: 30px;
     }
 
-    &:nth-last-child(-n + 3) {
-      margin-bottom: 0px;
+    &:nth-child(-n + 6) {
+      margin-bottom: 30px;
     }
   }
 }

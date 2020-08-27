@@ -484,6 +484,8 @@ img {
 
 @media screen and (min-width: 1200px) {
   .logo {
+    font-size: 26px;
+    line-height: 1.19;
     padding-top: 24px;
     padding-bottom: 25px;
   }

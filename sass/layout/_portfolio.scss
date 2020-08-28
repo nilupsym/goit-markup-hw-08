@@ -40,6 +40,10 @@
 .portfolio-list-item {
   width: 100%;
 
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
   &-link {
     border: 1px solid #eeeeee;
     transition-property: box-shadow;
@@ -89,7 +93,7 @@
   width: 100%;
   height: 100%;
 
-  padding: 63px 24px 63px 24px;
+  padding: 77px 24px 77px 24px;
 
   font-weight: 400;
   font-size: 18px;
@@ -110,9 +114,11 @@
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .portfolio-list-item {
-    width: 450px;
+@media screen and (max-width: 479px) {
+  .portfolio-hover-desc {
+    padding: 30px 20px 30px 20px;
+    font-size: 14px;
+    line-height: 1.19;
   }
 }
 
@@ -124,8 +130,9 @@
   .portfolio-filter-list-item:nth-child(-n + 3) {
     margin-bottom: 15px;
   }
-  .portfolio-list-item:not(:last-child) {
-    margin-bottom: 30px;
+
+  .portfolio-list-item {
+    max-width: 450px;
   }
 }
 
@@ -145,6 +152,10 @@
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .portfolio-filter {
     margin-bottom: 30px;
+  }
+
+  .portfolio-hover-desc {
+    padding: 49px 24px 49px 24px;
   }
 
   .portfolio-list-item {
@@ -168,6 +179,10 @@
 
   .portfolio-filter {
     margin-bottom: 50px;
+  }
+
+  .portfolio-hover-desc {
+    padding: 63px 24px 63px 24px;
   }
 
   .portfolio-list-item {

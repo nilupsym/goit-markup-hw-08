@@ -995,17 +995,22 @@ img {
 .portfolio-list-item-name {
   margin-top: 20px;
   padding-left: 24px;
+  padding-right: 24px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
   color: #212121;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .portfolio-list-item-desc {
   margin-top: 4px;
   padding-bottom: 20px;
   padding-left: 24px;
+  padding-right: 24px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.87;

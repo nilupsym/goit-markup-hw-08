@@ -60,17 +60,23 @@
   &-name {
     margin-top: 20px;
     padding-left: 24px;
+    padding-right: 24px;
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
     color: $title-color;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   &-desc {
     margin-top: 4px;
     padding-bottom: 20px;
     padding-left: 24px;
+    padding-right: 24px;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.87;

@@ -666,6 +666,9 @@ img {
   .why-are-we-list-item {
     max-width: 480px;
   }
+  .why-are-we-list-item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (min-width: 768px) {

@@ -238,7 +238,17 @@
   }
 }
 
-@media screen and (min-width: 528px) {
+@media screen and (min-width: 480px) and (max-width: 1199px) {
+  .modal-form {
+    width: 450px;
+  }
+
+  .modal-form-input {
+    width: 370px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .modal-form {
     width: 528px;
   }
